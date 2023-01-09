@@ -28,6 +28,6 @@ namespace InsurancePortal.Models
         [Column("mobileNumber")]
         public long MobileNumber { get; set; }
         [Column("dob")]
-        public DateOnly Dob { get; set; }
+        public String? Dob { get; set; }
     }
 }

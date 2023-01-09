@@ -23,6 +23,6 @@ namespace InsurancePortal.Models
         public string? PolicyEndDate { get; set; }
         [Column("policyStatus")]
         [StringLength(10)]
-        public DateOnly PolicyStatus { get; set; }
+        public string? PolicyStatus { get; set; }
     }
 }
