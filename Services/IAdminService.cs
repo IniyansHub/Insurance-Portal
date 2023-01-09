@@ -5,9 +5,6 @@ namespace InsurancePortal.Services
 {
 	public interface IAdminService
 	{
-		public List<Policy> GetAllPolicies();
-
-		public Task<Policy> GetPolicyById(int policyId);
 
 		public Task<Policy> CreatePolicy(Policy newPolicy);
 

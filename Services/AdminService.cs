@@ -36,18 +36,6 @@ namespace InsurancePortal.Services
             }
         }
 
-        public List<Policy> GetAllPolicies()
-        {
-            List<Policy> policies =  _insurancedb.Policies.ToList();
-
-            return policies;
-        }
-
-        public async Task<Policy> GetPolicyById(int policyId)
-        {
-            Policy? policy = await _insurancedb.Policies.FirstOrDefaultAsync(x=>x.PolicyId == policyId);
-            return policy;
-        }
 
         public async Task<bool> UpdatePolicy(int id,Policy updatedPolicy)
         {

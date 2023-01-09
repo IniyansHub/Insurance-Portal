@@ -20,6 +20,8 @@ builder.Services.AddDbContext<Insurance_PortalContext>(options => options.UseMyS
 
 builder.Services.AddScoped<IAdminService, AdminService>();
 builder.Services.AddScoped<IUserService,UserService>();
+builder.Services.AddScoped<IPolicyService, PolicyService>();
+builder.Services.AddScoped<IUserpolicyService, UserpolicyService>();
 
 var app = builder.Build();
 

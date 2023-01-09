@@ -26,22 +26,6 @@ namespace InsurancePortal.Controllers
         }
 
 
-        [HttpGet("getallPolicy")]
-        public ActionResult<List<Policy>> Get()
-        {
-            List<Policy> allPolicyList = _adminService.GetAllPolicies();
-            return Ok(allPolicyList) ;
-        }
-
-
-        [HttpGet("getpolicy/{id}")]
-        public ActionResult<Policy> Get(int id)
-        {
-            Policy policy = _adminService.GetPolicyById(id).Result;
-            return Ok(policy);
-        }
-
-
         [HttpPost("addpolicy")]
         public ActionResult<Policy> Post([FromBody]Policy newPolicy)
         {
