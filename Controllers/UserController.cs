@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using InsurancePortal.Models;
 using InsurancePortal.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -25,7 +27,7 @@ namespace InsurancePortal.Controllers
 
 
         [HttpGet("getprofile/{email}")]
-        public ActionResult<UserDetail> Get(string email)
+        public ActionResult<UserDetail> GetUserProfile(string email)
         {
             UserDetail profileDetail = _userService.GetUserProfile(email).Result;
             if (profileDetail != null)
@@ -41,7 +43,7 @@ namespace InsurancePortal.Controllers
 
 
         [HttpPost("createprofile")]
-        public ActionResult<UserDetail> Post([FromBody] UserDetail profiledata)
+        public ActionResult<UserDetail> CreateUserProfile([FromBody] UserDetail profiledata)
         {
             _logger.LogInformation("Inside profile creation");
 
@@ -61,13 +63,11 @@ namespace InsurancePortal.Controllers
             {
                 return BadRequest("All details are required to create a profile");
             }
-
-
         }
 
 
         [HttpPut("updateprofile/{email}")]
-        public ActionResult<UserDetail> Put(string email, [FromBody] UserDetail updatedprofile)
+        public ActionResult<UserDetail> UpdateUserProfile(string email, [FromBody] UserDetail updatedprofile)
         {
             _logger.LogInformation("Inside profile updation controller");
             var isUpdated = _userService.UpdateUserProfile(email, updatedprofile).Result;

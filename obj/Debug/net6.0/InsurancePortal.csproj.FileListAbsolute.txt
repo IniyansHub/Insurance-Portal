@@ -39,3 +39,12 @@
 /Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Humanizer.dll
 /Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.EntityFrameworkCore.Design.dll
 /Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/iniyan/Projects/InsurancePortalSolution/InsurancePortal/bin/Debug/net6.0/BCrypt.Net-Next.dll

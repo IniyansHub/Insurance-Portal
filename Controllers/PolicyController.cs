@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Threading.Tasks;
 using InsurancePortal.Data;
 using InsurancePortal.Models;
 using InsurancePortal.Services;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -24,7 +26,7 @@ namespace InsurancePortal.Controllers
         }
 
         [HttpGet]
-        public ActionResult Get()
+        public ActionResult GetAllPolicies()
         {
             List<Policy> allpolicies = _policyService.GetAllPolicies().Result;
             if (allpolicies != null)
@@ -39,7 +41,7 @@ namespace InsurancePortal.Controllers
         }
 
         [HttpGet("{id}")]
-        public ActionResult Get(int id)
+        public ActionResult GetPolicyById(int id)
         {
             Policy policy = _policyService.GetPolicyById(id).Result;
             if (policy != null)

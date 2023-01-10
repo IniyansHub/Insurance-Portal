@@ -35,7 +35,7 @@ namespace InsurancePortal.Controllers
         }
 
         [HttpPut("{id}")]
-        public ActionResult Put(int id, [FromBody]string value)
+        public ActionResult Put(int id, [FromBody]string status)
         {
             var updatedUserPolicy = _userpolicyService.UpdateUserPolicyStatus(id).Result;
             return Ok(updatedUserPolicy);
